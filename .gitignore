@@ -1,0 +1,17 @@
+# Parcel cache
+.cache/
+
+# Build distribution
+dist/
+
+# Dependency directories
+node_modules
+
+# elm-package generated files
+elm-stuff
+
+# elm-repl generated files
+repl-temp-*
+
+# Desktop Services Store on macOS
+.DS_Store

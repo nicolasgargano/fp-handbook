@@ -1,0 +1,16 @@
+{
+  "name": "fp-handbook",
+  "version": "0.1.0",
+  "description": "Handy book for functional programming concepts!",
+  "dependencies": {
+    "parcel": "^1.10.3"
+  },
+  "devDependencies": {
+    "node-elm-compiler": "^5.0.1"
+  },
+  "scripts": {
+    "start": "parcel src/index.html --port 4000"
+  },
+  "author": "Nicolás Gargano",
+  "license": "BSD-3-Clause"
+}
