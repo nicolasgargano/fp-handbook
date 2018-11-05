@@ -45,6 +45,19 @@ type Page
     | NotFound
 
 
+pageToString : Page -> String
+pageToString page =
+    case page of
+        Home ->
+            "Home"
+
+        Cheatsheet ->
+            "Cheatsheet"
+
+        NotFound ->
+            "NotFound"
+
+
 routeParser : Parser (Page -> a) a
 routeParser =
     oneOf
@@ -99,7 +112,7 @@ view : Model -> Browser.Document Msg
 view model =
     { title = "FP Handbook"
     , body =
-        [ "The current page is: " ++ Debug.toString model.page |> text
+        [ "The current page is: " ++ pageToString model.page |> text
         , ul []
             [ viewLink "/"
             , viewLink "/home"
