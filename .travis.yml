@@ -1,0 +1,21 @@
+env:
+  global:
+    - GITHUB_REPO: "nicolasgargano/fp-handbook"
+
+branches:
+  only:
+  - master
+
+language: node_js
+node_js: node
+cache: npm
+
+before_install:
+  - npm i -g npm@latest
+
+script:
+  - npm run build
+
+deploy:
+  - provider: script
+    script: bash ./.deploy-to-github-pages.sh
